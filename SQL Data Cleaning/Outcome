@@ -1,0 +1,42 @@
+🧹 SQL Data Cleaning Project – Nashville Housing Dataset
+Tools Used: Microsoft SQL Server
+Objective: To clean and prepare raw housing data for reliable analysis and reporting by resolving inconsistencies, null values, duplicates, and structural issues.
+
+🔍 Key Tasks Performed:
+Date Standardization
+
+Converted inconsistent SaleDate values to a proper DATE format.
+
+Created a new column SaleDateConverted to preserve the original data integrity.
+
+Handling Missing Values
+
+Identified and filled missing PropertyAddress values using JOIN on ParcelID, ensuring address completeness without guessing data.
+
+Address Normalization
+
+Split compound fields like PropertyAddress and OwnerAddress into separate columns:
+
+Address, City, State
+
+Used SUBSTRING() and PARSENAME() for structured parsing of values.
+
+Data Standardization
+
+Cleaned the SoldAsVacant column by converting inconsistent values (Y/N) to standardized (Yes/No) formats using CASE statements.
+
+Duplicate Removal
+
+Implemented a CTE with ROW_NUMBER() to detect and delete exact duplicate rows based on key identifiers like ParcelID, SalePrice, SaleDate, etc.
+
+Data Optimization
+
+Dropped redundant and unused columns (PropertyAddress, OwnerAddress, TaxDistrict, SaleDate) after creating cleaned alternatives.
+
+✅ Outcome:
+Delivered a clean, reliable, and analysis-ready dataset optimized for reporting, visualization, and deeper insights.
+
+Demonstrated proficiency in advanced SQL functions, including JOIN, ISNULL, CTE, ROW_NUMBER(), SUBSTRING(), CASE, and ALTER TABLE.
+
+Ensured data accuracy, consistency, and efficiency—essential for any data pipeline or BI workflow.
+
