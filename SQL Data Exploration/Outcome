@@ -1,0 +1,56 @@
+📊 SQL Data Exploration Project – COVID-19 Global Analysis
+Tools Used: Microsoft SQL Server
+Dataset: COVID-19 Global Deaths & Vaccination data (sourced from Our World in Data)
+Objective: To explore, analyze, and derive meaningful insights from the COVID-19 dataset using SQL, with a focus on infections, deaths, vaccinations, and global trends.
+
+🔍 Key Tasks & Analysis Performed:
+Data Preparation & Filtering
+
+Removed irrelevant or incomplete records (continent IS NOT NULL) to ensure only valid, region-specific data was analyzed.
+
+Selected essential columns for analysis: location, date, population, total_cases, total_deaths, new_cases, new_vaccinations.
+
+Infection & Mortality Analysis
+
+Analyzed total cases vs total deaths to calculate the Death Percentage for each country and tracked its trend over time.
+
+Assessed total cases vs population to identify the infection rate as a percentage of population, with country-wise breakdowns.
+
+High-Impact Country Identification
+
+Ranked countries by highest infection rate (cases vs population).
+
+Ranked countries and continents by total death count to identify worst-affected areas.
+
+Continental & Global Aggregations
+
+Aggregated data at the continent level to visualize macro-level impacts.
+
+Computed global totals for new cases, deaths, and overall global death percentage.
+
+Vaccination Progress Analysis
+
+Used JOIN across the deaths and vaccinations datasets to analyze progress over time.
+
+Applied window functions (SUM OVER PARTITION BY) to calculate rolling totals of vaccinated people per country.
+
+Population vs Vaccination Coverage
+
+Created a CTE (WITH PopVsVac) to compute and compare vaccinated population % per country.
+
+Assessed each country’s vaccination progress in relation to its population.
+
+View Creation for Visualization
+
+Created a SQL View PercentPopulationVaccinated to store cleaned and aggregated vaccination data for easy integration with BI tools like Power BI or Tableau.
+
+✅ Outcome:
+Delivered a comprehensive exploratory analysis covering infection trends, death rates, and vaccination coverage globally and per continent.
+
+Gained insights on COVID-19 impact disparities between countries and continents.
+
+Demonstrated strong SQL skills including:
+
+Joins, Window Functions, CTEs, Views, Aggregations, and Conditional Logic.
+
+Prepared a dataset ready for data visualization and storytelling in Power BI/Tableau dashboards.
